@@ -62,7 +62,7 @@ export default function Dashboard() {
               textAlign: "center",
             }}
           >
-            GM Soluções em dados
+            GM Soluções em dadosss
           </h2>
         </div>
         <div style={{ display: "flex", gap: 20 }}>
