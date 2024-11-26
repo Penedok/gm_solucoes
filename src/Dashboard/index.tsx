@@ -1,27 +1,45 @@
 import fluxoDeCaixa2 from "../assets/Fluxo_Caixa2.png";
+import Logo_1 from "../assets/Logo_1.png";
 import fluxoDeCaixa from "../assets/Fluxo_Caixa.png";
 import grafico_escuro from "../assets/grafico_escuro.png";
 import grafico_brasil from "../assets/grafico_brasil.png";
 import grafico_google from "../assets/grafico_google.png";
 import Dre from "../assets/DRE.png";
 import Produtos from "../assets/Produtos.png";
-import comparacoes from "../assets/mulher_comparando.png";
+/* import comparacoes from "../assets/mulher_comparando.png";
 import planejamento from "../assets/planejamento.jpg";
-import confuso from "../assets/confuso.jpg";
-import { BsReception4,BsTablet, } from "react-icons/bs";
-import { CgSandClock } from 'react-icons/cg'
+import confuso from "../assets/confuso.jpg"; */
+import { BsReception4, BsTablet } from "react-icons/bs";
+import { PiUsersThreeBold } from "react-icons/pi";
+import { CgSandClock } from "react-icons/cg";
+import { FaTrophy } from "react-icons/fa";
 import { useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import {
-  Button, Container, HeaderDiv, SliderButton, SlideImg, AreaDivHeader,
-  ItensHeader1,ItensHeader2,BannerDiv,BannerDivTexto,BannerH2,BannerP,
-  BannerDivIMG,GraficoSliderContainer,PortifolioClienteContainer,
-  ModalContainer,ModalCaixa,CardContainer,CardCaixa,ItemCardDestaque,
-  ItemCard01,ItemCard02
-
+  Button,
+  Container,
+  HeaderDiv,
+  SliderButton,
+  SlideImg,
+  AreaDivHeader,
+  ItensHeader1,
+  ItensHeader2,
+  BannerDiv,
+  BannerDivTexto,
+  BannerH2,
+  BannerP,
+  BannerDivIMG,
+  GraficoSliderContainer,
+  PortifolioClienteContainer,
+  ModalContainer,
+  ModalCaixa,
+  CardContainer,
+  CardCaixa,
+  ItemCardDestaque,
+  ItemCard01,
+  ItemCard02,
 } from "./Dashboard.style";
-
 
 export default function Dashboard() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -37,8 +55,7 @@ export default function Dashboard() {
     { id: "7", image: Dre },
   ];
 
-
-  const openModal = (image:any) => {
+  const openModal = (image: any) => {
     setSelectedImage(image);
     setModalVisible(true);
   };
@@ -50,7 +67,7 @@ export default function Dashboard() {
   return (
     <Container>
       {/* header */}
-      <HeaderDiv >
+      <HeaderDiv>
         <AreaDivHeader>
           <ItensHeader1>
             <BsReception4
@@ -73,51 +90,81 @@ export default function Dashboard() {
           </ItensHeader1>
           <ItensHeader2>
             {/* Added gap between items */}
-            <a href="#" style={{ color: "#fff", textDecoration: "none", fontWeight: '600' }}>
+            <a
+              href="#"
+              style={{
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
               contate-nos
             </a>
-            <a href="#" style={{ color: "#fff", textDecoration: "none", fontWeight: '600' }}>
+            <a
+              href="#"
+              style={{
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
               nossos serviços
             </a>
-            <a href="#" style={{ color: "#fff", textDecoration: "none", fontWeight: '600' }}>
+            <a
+              href="#"
+              style={{
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
               quem somos
             </a>
           </ItensHeader2>
         </AreaDivHeader>
-
       </HeaderDiv>
-      <div style={{width:'100%', height:"100%", display:'flex', flexDirection:'column', justifyContent:'space-around',
-         alignItems:' center'}}>
-          {/* body banner */}
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-around",
+          alignItems: " center",
+        }}
+      >
+        {/* body banner */}
         <BannerDiv>
           <BannerDivTexto>
             <BannerH2>
               Transforme suas ideias em <strong>Realidade</strong>
             </BannerH2>
-            <BannerP
-            
-            >
+            <BannerP>
               Transformar suas ideias de negócios através da análise de dados é
               uma maneira poderosa de impulsionar o sucesso da sua empresa. Ao
               coletar e analisar dados relevantes, você pode obter insights
-              valiosos sobre o comportamento dos clientes, identificar tendências
-              de mercado e otimizar processos internos.
+              valiosos sobre o comportamento dos clientes, identificar
+              tendências de mercado e otimizar processos internos.
             </BannerP>
-            <div style={{display:'flex', width:"100%"}}>
+            <div style={{ display: "flex", width: "100%" }}>
               <Button
                 //onClick={() => setKarenTeste("teste")}
-                style={{ width: 200, height: 40, fontSize: 18, fontWeight: "600" }}
+                style={{
+                  width: 200,
+                  height: 40,
+                  fontSize: 18,
+                  fontWeight: "600",
+                }}
               >
-                Contate-nos
+                Contate-no
               </Button>
             </div>
           </BannerDivTexto>
-          <BannerDivIMG
-          />
+          <BannerDivIMG />
         </BannerDiv>
         <CardContainer>
           <CardCaixa>
-            <ItemCardDestaque >
+            <ItemCardDestaque>
               <BsReception4
                 style={{
                   width: 50,
@@ -125,28 +172,71 @@ export default function Dashboard() {
                   color: "#fff",
                 }}
               />
-              <h3 style={{color:'#fff', textAlign:'center',paddingLeft:30,paddingRight:30}}>Tenha controle dos seus Resultados</h3>
-              <p style={{color:'#fff',textAlign:'center',paddingLeft:30,paddingRight:30,}}>Nossa solução traz para sua empresa painéis visuais que apresentam seus
-              dados de forma dinâmica e intuitiva.</p>
-              <Button backgroundColor="#fff"
-                //onClick={() => setKarenTeste("teste")}
-                style={{ width: 200, height: 40, fontSize: 18, fontWeight: "400",marginBottom:10, color:'#000'}}
+              <h3
+                style={{
+                  color: "#fff",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
               >
-                Saiba como 
+                Tenha controle dos seus Resultados
+              </h3>
+              <p
+                style={{
+                  color: "#fff",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
+              >
+                Nossa solução traz para sua empresa painéis visuais que
+                apresentam seus dados de forma dinâmica e intuitiva.
+              </p>
+              <Button
+                backgroundColor="#fff"
+                //onClick={() => setKarenTeste("teste")}
+                style={{
+                  width: 200,
+                  height: 40,
+                  fontSize: 18,
+                  fontWeight: "400",
+                  marginBottom: 10,
+                  color: "#000",
+                }}
+              >
+                Saiba como
               </Button>
-
             </ItemCardDestaque>
             <ItemCard01>
-            <CgSandClock
-              style={{
-                width: 50,
-                height: 50,
-                color: "#000",
-              }}
+              <CgSandClock
+                style={{
+                  width: 50,
+                  height: 50,
+                  color: "#000",
+                }}
               />
-              <h3 style={{color:'#000', textAlign:'center',paddingLeft:30,paddingRight:30}}>Não perca mais tempo</h3>
-                <p style={{color:'#000',textAlign:'center',paddingLeft:30,paddingRight:30,}}>Nossas soluções automatizadas  economizam seu tempo para decisões.</p>
-              
+              <h3
+                style={{
+                  color: "#000",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
+              >
+                Não perca mais tempo
+              </h3>
+              <p
+                style={{
+                  color: "#000",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
+              >
+                Nossas soluções automatizadas economizam seu tempo para
+                decisões.
+              </p>
             </ItemCard01>
             <ItemCard02>
               <BsTablet
@@ -156,10 +246,28 @@ export default function Dashboard() {
                   color: "#000",
                 }}
               />
-            
-              <h3 style={{color:'#000', textAlign:'center',paddingLeft:30,paddingRight:30}}>Seus dados a qualquer hora</h3>
-                <p style={{color:'#000',textAlign:'center',paddingLeft:30,paddingRight:30,}}>Acesse informações essenciais de forma  rápida e prática, onde quer que você esteja.</p>
-                
+
+              <h3
+                style={{
+                  color: "#000",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
+              >
+                Seus dados a qualquer hora
+              </h3>
+              <p
+                style={{
+                  color: "#000",
+                  textAlign: "center",
+                  paddingLeft: 30,
+                  paddingRight: 30,
+                }}
+              >
+                Acesse informações essenciais de forma rápida e prática, onde
+                quer que você esteja.
+              </p>
             </ItemCard02>
           </CardCaixa>
         </CardContainer>
@@ -174,50 +282,260 @@ export default function Dashboard() {
               flexDirection: "column",
             }}
           >
-            
-              <h2 style={{ fontSize: 40, fontWeight: 600 }}>
-                Nosso Portifolio
-              </h2>
-            
-              <p style={{ fontSize: 20, fontWeight: 300 }}>
-              Descubra nosso portfólio de dashboards inovadores, projetados para transformar dados complexos em insights claros e  acionáveis. Com nossas soluções de visualização, você pode monitorar métricas-chave em tempo real, facilitando decisões estratégicas e melhorando a performance operacional. Explore como nossas  ferramentas podem impulsionar seu negócio a novos patamares de eficiência e sucesso.
-              Estamos prontos para enfrentar novos desafios e contribuir para o sucesso dos nossos parceiros e clientes.
-              </p>
+            <h2 style={{ fontSize: 40, fontWeight: 600 }}>Nosso Portifolio</h2>
+
+            <p style={{ fontSize: 20, fontWeight: 300 }}>
+              Descubra nosso portfólio de dashboards inovadores, projetados para
+              transformar dados complexos em insights claros e acionáveis. Com
+              nossas soluções de visualização, você pode monitorar
+              métricas-chave em tempo real, facilitando decisões estratégicas e
+              melhorando a performance operacional. Explore como nossas
+              ferramentas podem impulsionar seu negócio a novos patamares de
+              eficiência e sucesso. Estamos prontos para enfrentar novos
+              desafios e contribuir para o sucesso dos nossos parceiros e
+              clientes.
+            </p>
           </div>
         </PortifolioClienteContainer>
         <GraficoSliderContainer>
-            <SliderButton
-              modules={[EffectCoverflow]}
-              effect="coverflow"
-              spaceBetween={0}
-              slidesPerView={1} 
-              navigation
-              pagination={{ clickable: true }}
-            >
-              {dada_Img.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <SlideImg
-                    alt="slider"
-                    src={item.image}
-                    onClick={() => openModal(item?.image)}
-                  />
-                </SwiperSlide>
-              ))}
-            </SliderButton>
+          <SliderButton
+            modules={[EffectCoverflow]}
+            effect="coverflow"
+            spaceBetween={0}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+          >
+            {dada_Img.map((item, index) => (
+              <SwiperSlide key={index}>
+                <SlideImg
+                  alt="slider"
+                  src={item.image}
+                  onClick={() => openModal(item?.image)}
+                />
+              </SwiperSlide>
+            ))}
+          </SliderButton>
 
-            {modalVisible && (
-                <ModalContainer 
-                onClick={closeModal}
-                >
-                  <ModalCaixa 
-                    className="modal" 
-                    onClick={closeModal}>
-                    <img src={selectedImage || undefined} alt="Selected" style={{maxWidth: '100%', maxHeight: '100%'}} />
-                  </ModalCaixa>
-                </ModalContainer>
-              )}
+          {modalVisible && (
+            <ModalContainer onClick={closeModal}>
+              <ModalCaixa className="modal" onClick={closeModal}>
+                <img
+                  src={selectedImage || undefined}
+                  alt="Selected"
+                  style={{ maxWidth: "100%", maxHeight: "100%" }}
+                />
+              </ModalCaixa>
+            </ModalContainer>
+          )}
         </GraficoSliderContainer>
         <div
+          style={{
+            width: "100%",
+            height: 650,
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "80%",
+              height: 350,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 30,
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                height: 350,
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={Logo_1}
+                style={{ width: "100%", height: 480, borderRadius: 10 }}
+              />
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: 350,
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h2>Quem Somos</h2>
+                <h3>GM Soluções em Dados</h3>
+                <p>
+                  Desde 2020, nossa empresa está oferecendo serviços de alta
+                  qualidade, graças à nossa equipe de profissionais capacitados.
+                  Com uma vasta experiência adquirida ao longo dos anos, nossos
+                  colaboradores já trabalharam com grandes clientes de diversos
+                  ramos de atuação, sempre buscando superar as expectativas e
+                  entregar resultados excepcionais. Nosso compromisso com a
+                  excelência e a satisfação do cliente é o que nos motiva a
+                  continuar inovando e aprimorando nossos serviços. Estamos
+                  prontos para enfrentar novos desafios e contribuir para o
+                  sucesso dos nossos parceiros e clientes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: 550,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "80%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div style={{}}>
+              <h2
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                Nossos Serviços
+              </h2>
+              <p
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                Transforme seus dados em poderosas ferramentas estratégicas com
+                nossos serviços. Utilizando as mais modernas técnicas e
+                tecnologias, oferecemos insights que vão além das estatísticas,
+                revelando oportunidades de crescimento e otimizando a tomada de
+                decisões. Nossa equipe de especialistas está pronta para
+                converter dados brutos em conhecimento valioso, impulsionando
+                sua empresa para o próximo nível.
+              </p>
+            </div>
+            <CardContainer>
+              <CardCaixa>
+                <ItemCardDestaque>
+                  <PiUsersThreeBold
+                    style={{
+                      width: 80,
+                      height: 45,
+                      color: "#fff",
+                    }}
+                  />
+                  <h3
+                    style={{
+                      color: "#fff",
+                      textAlign: "center",
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                    }}
+                  >
+                    Consultoria
+                  </h3>
+                  <p
+                    style={{
+                      color: "#fff",
+                      textAlign: "center",
+                    }}
+                  >
+                    Transformamos seus dados em análises visuais com o propósito
+                    de facilitar as tomadas de decisões, identificamos os
+                    principais problemas dentro do seu negócio e apresentamos
+                    para você de forma intuitiva e fácil.
+                  </p>
+                </ItemCardDestaque>
+                <ItemCard01>
+                  <BsReception4
+                    style={{
+                      width: 50,
+                      height: 50,
+                      color: "#000",
+                    }}
+                  />
+                  <h3
+                    style={{
+                      color: "#000",
+                      textAlign: "center",
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                    }}
+                  >
+                    Gerenciamento
+                  </h3>
+                  <p
+                    style={{
+                      color: "#000",
+                      textAlign: "center",
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                    }}
+                  >
+                    Gerenciamos seus dados para fornecer periodicamente análises
+                    acertivas e fáceis de interpretar.
+                  </p>
+                </ItemCard01>
+                <ItemCard02>
+                  <FaTrophy
+                    style={{
+                      width: 50,
+                      height: 50,
+                      color: "#000",
+                    }}
+                  />
+
+                  <h3
+                    style={{
+                      color: "#000",
+                      textAlign: "center",
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                    }}
+                  >
+                    Treinamento
+                  </h3>
+                  <p
+                    style={{
+                      color: "#000",
+                      textAlign: "center",
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                    }}
+                  >
+                    Treinamos você e sua equipe de funcionários para operar os
+                    dashboards e desenvolver suas próprias análises
+                  </p>
+                </ItemCard02>
+              </CardCaixa>
+            </CardContainer>
+          </div>
+        </div>
+
+        {/* <div
           style={{
             width: "80%",
             height: 700,
@@ -225,7 +543,6 @@ export default function Dashboard() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-
           }}
         >
           <h3>
@@ -239,8 +556,7 @@ export default function Dashboard() {
               flexDirection: "row",
               justifyContent: "space-around",
               gap: 50,
-              alignItems: 'baseline'
-
+              alignItems: "baseline",
             }}
           >
             <div
@@ -251,7 +567,6 @@ export default function Dashboard() {
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-
               }}
             >
               <img
@@ -261,21 +576,28 @@ export default function Dashboard() {
                   width: "100%",
                   height: 280,
                   borderRadius: 20,
-                  backgroundPosition: 'center'
+                  backgroundPosition: "center",
                 }}
               />
-              <div style={{
-                width: '100%', paddingRight: 10, paddingLeft: 10, height: 230, display: 'flex', flexDirection: 'column',
-                justifyContent: 'space-around'
-              }}>
+              <div
+                style={{
+                  width: "100%",
+                  paddingRight: 10,
+                  paddingLeft: 10,
+                  height: 230,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                }}
+              >
                 <h3 style={{ margin: 0, padding: 0 }}>
                   Organização de <strong>dados</strong>
                 </h3>
                 <p style={{ margin: 0, padding: 0 }}>
-                  Organização dos seus Dados Dashboards permitem a visualização de
-                  dados complexos de forma clara e intuitiva. Gráficos, tabelas
-                  dinâmicas e indicadores visuais que ajudam a entender rapidamente
-                  as informações, facilitando a tomada de decisões.
+                  Organização dos seus Dados Dashboards permitem a visualização
+                  de dados complexos de forma clara e intuitiva. Gráficos,
+                  tabelas dinâmicas e indicadores visuais que ajudam a entender
+                  rapidamente as informações, facilitando a tomada de decisões.
                 </p>
               </div>
             </div>
@@ -285,8 +607,8 @@ export default function Dashboard() {
                 height: 500,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: 'center',
-                alignItems: 'center'
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <img
@@ -294,19 +616,26 @@ export default function Dashboard() {
                 alt="um homem comparando dados"
                 style={{ width: "100%", height: 280, borderRadius: 20 }}
               />
-              <div style={{
-                width: '100%', paddingRight: 10, paddingLeft: 10, height: 180, display: 'flex', flexDirection: 'column',
-                justifyContent: 'space-around'
-              }}>
+              <div
+                style={{
+                  width: "100%",
+                  paddingRight: 10,
+                  paddingLeft: 10,
+                  height: 180,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                }}
+              >
                 <h3 style={{ margin: 0, padding: 0 }}>
                   Atualizações <strong>Automáticas</strong>
                 </h3>
                 <p style={{ margin: 0, padding: 0 }}>
-                  Dashboards podem ser configurados para atualizar automaticamente
-                  com novos dados. Isso garante que as informações estejam sempre
-                  atualizadas, permitindo uma análise em tempo real.
+                  Dashboards podem ser configurados para atualizar
+                  automaticamente com novos dados. Isso garante que as
+                  informações estejam sempre atualizadas, permitindo uma análise
+                  em tempo real.
                 </p>
-
               </div>
             </div>
             <div
@@ -315,8 +644,8 @@ export default function Dashboard() {
                 height: 500,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: 'center',
-                alignItems: 'center',
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <img
@@ -324,26 +653,31 @@ export default function Dashboard() {
                 alt="um homem comparando dados"
                 style={{ width: "100%", height: 280, borderRadius: 20 }}
               />
-              <div style={{
-                width: '100%', paddingRight: 10, paddingLeft: 10, height: 180, display: 'flex', flexDirection: 'column',
-                justifyContent: 'space-around'
-              }}>
+              <div
+                style={{
+                  width: "100%",
+                  paddingRight: 10,
+                  paddingLeft: 10,
+                  height: 180,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                }}
+              >
                 <h3 style={{ margin: 0, padding: 0 }}>
                   Análise <strong>Comparativa</strong>
                 </h3>
                 <p style={{ margin: 0, padding: 0 }}>
-                  Dashboards permitem a comparação de diferentes conjuntos de dados
-                  de forma eficiente. Isso é especialmente útil para monitorar KPIs
-                  (Indicadores Chave de Desempenho) e identificar tendências ao
-                  longo do tempo.
+                  Dashboards permitem a comparação de diferentes conjuntos de
+                  dados de forma eficiente. Isso é especialmente útil para
+                  monitorar KPIs (Indicadores Chave de Desempenho) e identificar
+                  tendências ao longo do tempo.
                 </p>
-
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      
     </Container>
   );
 }

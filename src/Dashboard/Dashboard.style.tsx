@@ -1,53 +1,51 @@
 import styled from "styled-components";
-import { Swiper, } from "swiper/react";
+import { Swiper } from "swiper/react";
 import bannerImage from "../assets/banner_grafico.jpg";
-
 
 interface ButtonProps {
   backgroundColor?: string;
 }
 
+interface heightCard {
+  heigh?: number;
+}
+
 export const Container = styled.div`
   display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const HeaderDiv = styled.div`
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;                                                 
-    flex-direction: row;
-    justify-content: center;
-    background:#e0a68190
-`
-  ;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+`;
 
 export const AreaDivHeader = styled.div`
-    width: 90%;
-    height:100px;
-    display: flex;
-    align-items: center;                                                 
-    flex-direction: row;
-    justify-content: space-between;;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const ItensHeader1 = styled.div`
-    display: flex;
-    align-items: center;
-
-    
+  display: flex;
+  align-items: center;
 `;
 
 export const ItensHeader2 = styled.div`
-    width: 440px;
-    display: flex;
-    justify-content: space-between;;
-
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const BannerDiv = styled.div`
@@ -57,34 +55,29 @@ export const BannerDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top:2.5em;
-  margin-bottom:2em;
-`
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+`;
 export const BannerDivTexto = styled.div`
   display: flex;
   width: 60%;
   height: 400px;
   justify-content: space-evenly;
   flex-direction: column;
-
-  
-   
-`
+`;
 
 export const BannerH2 = styled.h2`
   font-weight: 400;
   text-align: left;
   font-size: 45px;
-   
-`
+`;
 export const BannerP = styled.p`
   text-align: left;
   font-weight: 400;
   font-size: 18px;
-   
-`
+`;
 export const Button = styled.button<ButtonProps>`
-  background-color: ${(props) => props.backgroundColor || '#dd7a49'};
+  background-color: ${(props) => props.backgroundColor || "#dd7a49"};
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -95,83 +88,60 @@ export const Button = styled.button<ButtonProps>`
   &:hover {
     background-color: #f3f3;
   }
-`
+`;
 
 export const CardContainer = styled.div`
-width:100%;
-display:flex;
-justify-content:center;
-height:300;
-marginTop:20
-  
-`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 300;
+  margintop: 20;
+`;
 export const CardCaixa = styled.div`
-width:83%;
-display:flex;
-height:390px; 
-justify-content:space-around;
-align-items: center;
-
-  
-`
-export const ItemCardDestaque = styled.div`
-width:30%; 
-display:flex;
-height:300px;
-background:#dd7a49;
-border-radius:8px;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-box-shadow: 10px 20px 0px 0 #000000;
-  
-`
+  width: 83%;
+  display: flex;
+  height: 390px;
+  justify-content: space-around;
+  align-items: center;
+`;
+export const ItemCardDestaque = styled.div<heightCard>`
+  width: 30%;
+  display: flex;
+  height: ${(props) => props.height || "300px"}
+  background: #dd7a49;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 20px 0px 0 #000000;
+`;
 export const ItemCard01 = styled.div`
-width:30%; 
-display:flex;
-height:300px;
-background:#f3f3f3;
-border-radius:8px;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-  
-`
+  width: 30%;
+  display: flex;
+  height: 300px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const ItemCard02 = styled.div`
-width:30%; 
-display:flex;
-height:300px;
-background:#f3f3f3;
-border-radius:8px;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-  
-`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  width: 30%;
+  display: flex;
+  height: 300px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const SlideImg = styled.img`
-  width:80%;
+  width: 80%;
   height: 450px;
   align-items: center;
-`
-
+`;
 
 export const SliderButton = styled(Swiper)`
   & .swiper-button-prev,
@@ -195,68 +165,42 @@ export const BannerDivIMG = styled.div`
 `;
 
 export const PortifolioClienteContainer = styled.div`
-width: 100%;
-height: 210px;
-display: flex;
-margin-top:2em;
-margin-bottom:2em;
-justify-Content: center;
-
-
-
+  width: 100%;
+  height: 210px;
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  justify-content: center;
 `;
 
 export const GraficoSliderContainer = styled.div`
-width: 80%;
-height: 480px;
-display: flex;
-justify-content: center;
-align-items: center;
-
+  width: 80%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-
 export const ModalContainer = styled.div`
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: #000;
-z-Index: 100;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 100;
 `;
 
 export const ModalCaixa = styled.div`
-position: absolute;
-top: 10%;
-left: 10%;
-width: 80%;
-height: 80%;
-background: #000;
-z-Index: 500;
-padding: 20px;
-display: flex;
-justify-content:center;
-align-items:center
-
-`
-
-
-
-
-
-
-;
-
-
-
-
-
-
-
-
-
-
-
-
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: #000;
+  z-index: 500;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
